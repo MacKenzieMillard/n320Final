@@ -20,7 +20,7 @@ nav {
       }
     }
 
-    .signoutBtn {
+    .signOutBtn {
       width: 90px;
       height: 50px;
       padding: 8px;
@@ -30,11 +30,12 @@ nav {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+    // for some reason this styling isn't being applied
 
     .name {
       height: 75px;
       font-family: CaveatReg;
-      font-size: 25px;
+      font-size: 35px;
       margin-right: 20px;
     }
   }

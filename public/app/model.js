@@ -1,4 +1,4 @@
-// ive been beating my head on this for hours i cannot figure this out im resigned to a bad grade tbh sorry
+// ive been beating my head on this for hours i cannot figure out the list thing im resigned to a bad grade sorry i've been awake for over 24hrs at this point
 
 var MODEL = (function(){
     var homeContent = `<div class="home">
