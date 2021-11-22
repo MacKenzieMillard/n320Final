@@ -1,0 +1,368 @@
+.browse {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(167, 232, 189, 0.8),
+      rgba(167, 232, 189, 0.8)
+    ),
+    url(../images/recipe-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 100px;
+
+  h1 {
+    font-family: CaveatBold;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-top: 5%;
+    margin-bottom: 50px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+
+    .pizza {
+      width: 600px;
+      display: flex;
+      margin-right: 50px;
+      margin-bottom: 50px;
+
+      .pizzaImg {
+        width: 300px;
+        height: 263px;
+        border-radius: 20px;
+        background-image: url(../images/recipe-pizza.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .description {
+        width: 224px;
+        height: 263px;
+        border-radius: 20px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h3 {
+          width: 150px;
+          font-family: LatoReg;
+          font-size: 15px;
+          border-bottom: solid 1px black;
+          margin: 0 auto;
+        }
+
+        p {
+          width: 150px;
+          font-family: LatoReg;
+          font-size: 9px;
+          margin: 0 auto;
+        }
+
+        .cookTime {
+          width: 83px;
+          height: 25px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-evenly;
+
+          img {
+            width: 23px;
+            height: 24px;
+          }
+
+          p {
+            font-family: LatoReg;
+            font-size: 10px;
+            margin: 0 auto;
+          }
+        }
+
+        .servings {
+          width: 87px;
+          height: 22px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-evenly;
+
+          img {
+            width: 24px;
+            height: 21px;
+          }
+
+          p {
+            font-family: LatoReg;
+            font-size: 10px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .burger {
+      width: 600px;
+      display: flex;
+      margin-right: 50px;
+      margin-bottom: 50px;
+
+      .burgerImg {
+        width: 300px;
+        height: 263px;
+        border-radius: 20px;
+        background-image: url(../images/recipe-burger.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .description {
+        width: 224px;
+        height: 263px;
+        border-radius: 20px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h3 {
+          width: 150px;
+          font-family: LatoReg;
+          font-size: 15px;
+          border-bottom: solid 1px black;
+          margin: 0 auto;
+        }
+
+        p {
+          width: 150px;
+          font-family: LatoReg;
+          font-size: 9px;
+          margin: 0 auto;
+        }
+
+        .cookTime {
+          width: 83px;
+          height: 25px;
+          display: flex;
+          justify-content: space-evenly;
+          margin: 0 auto;
+
+          img {
+            width: 23px;
+            height: 24px;
+          }
+
+          p {
+            font-family: LatoReg;
+            font-size: 10px;
+            margin: 0 auto;
+          }
+        }
+
+        .servings {
+          width: 87px;
+          height: 22px;
+          display: flex;
+          justify-content: space-evenly;
+          margin: 0 auto;
+
+          img {
+            width: 24px;
+            height: 21px;
+          }
+
+          p {
+            font-family: LatoReg;
+            font-size: 10px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    // this is really bothering but i can't figure out how to fix this tiny thing - neither of these two (pilaf and chowmein) are aligned and i don't know why D:<
+    .pilaf {
+      width: 600px;
+      display: flex;
+      margin-right: 50px;
+      margin-bottom: 50px;
+
+      .pilafImg {
+        width: 300px;
+        height: 263px;
+        border-radius: 20px;
+        background-image: url(../images/recipe-pilaf.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .description {
+        width: 224px;
+        height: 263px;
+        border-radius: 20px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h3 {
+          width: 150px;
+          font-family: LatoReg;
+          font-size: 15px;
+          border-bottom: solid 1px black;
+          margin: 0 auto;
+        }
+
+        p {
+          width: 150px;
+          font-family: LatoReg;
+          font-size: 9px;
+          margin: 0 auto;
+        }
+
+        .cookTime {
+          width: 83px;
+          height: 25px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-evenly;
+
+          img {
+            width: 23px;
+            height: 24px;
+          }
+
+          p {
+            font-family: LatoReg;
+            font-size: 10px;
+            margin: 0 auto;
+          }
+        }
+
+        .servings {
+          width: 87px;
+          height: 22px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-evenly;
+
+          img {
+            width: 24px;
+            height: 21px;
+          }
+
+          p {
+            font-family: LatoReg;
+            font-size: 10px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .chowMein {
+      width: 600px;
+      display: flex;
+      margin-bottom: 50px;
+
+      .chowImg {
+        width: 300px;
+        height: 263px;
+        border-radius: 20px;
+        background-image: url(../images/recipe-chowmein.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .description {
+        width: 224px;
+        height: 263px;
+        border-radius: 20px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h3 {
+          width: 150px;
+          font-family: LatoReg;
+          font-size: 15px;
+          border-bottom: solid 1px black;
+          margin: 0 auto;
+        }
+
+        p {
+          width: 150px;
+          font-family: LatoReg;
+          font-size: 9px;
+          margin: 0 auto;
+        }
+
+        .cookTime {
+          width: 83px;
+          height: 25px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-evenly;
+
+          img {
+            width: 23px;
+            height: 24px;
+          }
+
+          p {
+            font-family: LatoReg;
+            font-size: 10px;
+            margin: 0 auto;
+          }
+        }
+
+        .servings {
+          width: 87px;
+          height: 22px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-evenly;
+
+          img {
+            width: 24px;
+            height: 21px;
+          }
+
+          p {
+            font-family: LatoReg;
+            font-size: 10px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 960px) {
+//   .photos {
+//     display: flex;
+//     flex-direction: column;
+
+//     .imgBtn {
+//       .buttonView {
+//       }
+//     }
+
+//     .description {
+//       margin-left: 38px;
+//     }
+//   }
+// }

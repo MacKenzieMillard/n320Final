@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: CaveatBold;
+  src: url(../css/fonts/Caveat-Bold.ttf);
+}
+
+@font-face {
+  font-family: CaveatReg;
+  src: url(../css/fonts/Caveat-Regular.ttf);
+}
+
+@font-face {
+  font-family: GillSansLight;
+  src: url(../css/fonts/GillSans-Light.ttf);
+}
+
+@font-face {
+  font-family: GillSans;
+  src: url(../css/fonts/GillSans.ttf);
+}
+
+@font-face {
+  font-family: GillSansItalic;
+  src: url(../css/fonts/GillSans-Italic.ttf);
+}
+
+@font-face {
+  font-family: LatoBold;
+  src: url(../css/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: LatoBoldIta;
+  src: url(../css/fonts/Lato-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: LatoItalic;
+  src: url(../css/fonts/Lato-Italic.ttf);
+}
+
+@font-face {
+  font-family: LatoReg;
+  src: url(../css/fonts/Lato-Regular.ttf);
+}

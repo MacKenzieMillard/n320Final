@@ -1,0 +1,110 @@
+.recipeDetails {
+  max-width: 1280px;
+  padding: 75px;
+
+  h1 {
+    width: 220px;
+    height: 33px;
+    font-family: LatoReg;
+    font-size: 25px;
+    // transform: rotate(-90deg);
+    margin-bottom: 10px;
+  }
+
+  .description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    img {
+      width: 468px;
+      margin-right: 40px;
+    }
+
+    .des {
+      width: 500px;
+
+      h2 {
+        font-family: LatoReg;
+        font-size: 25px;
+        margin-bottom: 35px;
+      }
+
+      p {
+        font-family: CaveatReg;
+        font-size: 20px;
+      }
+
+      h3 {
+        font-family: LatoReg;
+        font-size: 20px;
+      }
+
+      h4 {
+        font-family: CaveatReg;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .ingredients {
+    max-width: 1000px;
+    margin-bottom: 60px;
+
+    h1 {
+      font-family: LatoReg;
+      font-size: 25px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-family: CaveatReg;
+      font-size: 20px;
+    }
+  }
+
+  .instructions {
+    max-width: 1000px;
+    margin-bottom: 60px;
+
+    h1 {
+      font-family: LatoReg;
+      font-size: 25px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-family: CaveatReg;
+      font-size: 20px;
+    }
+  }
+
+  .editBtn {
+    a {
+      text-decoration: none;
+      color: black;
+      background-color: #ffd972;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 128px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: CaveatReg;
+      font-size: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .description {
+    flex-direction: column;
+  }
+
+  .ingredients {
+    max-width: 800px;
+  }
+}

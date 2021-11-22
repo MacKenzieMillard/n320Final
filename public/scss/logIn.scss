@@ -1,0 +1,107 @@
+.account {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 100px;
+  background-color: #ffd972;
+  display: flex;
+  justify-content: space-between;
+
+  .logIn {
+    width: 45%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 75px;
+
+    h1 {
+      font-family: LatoReg;
+      font-size: 30px;
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+
+    input {
+      width: 250px;
+      height: 20px;
+      font-family: LatoReg;
+      font-size: 12px;
+      border: none;
+      border-bottom: solid 1px black;
+      background-color: #ffd972;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+
+    .submit {
+      height: 52px;
+      margin: 0 auto;
+
+      input {
+        font-family: CaveatReg;
+        font-size: 25px;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        border-radius: 26px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+  }
+
+  .createAccount {
+    width: 40%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+    p {
+      font-family: LatoItalic;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-family: LatoReg;
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+
+    input {
+      width: 250px;
+      height: 20px;
+      font-family: LatoReg;
+      font-size: 12px;
+      border: none;
+      border-bottom: solid 1px black;
+      background-color: #ffd972;
+      margin-bottom: 50px;
+    }
+
+    .submit {
+      height: 52px;
+
+      input {
+        font-family: CaveatReg;
+        font-size: 25px;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        border-radius: 26px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .account {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
