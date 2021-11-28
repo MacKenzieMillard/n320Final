@@ -14,13 +14,33 @@
   background-size: cover;
   margin: 0 auto;
 
+  .pinkCircle {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    background-color: #fcbcb8;
+    margin: 0 auto;
+    // margin-right: -150px;
+    // margin-left: 700px;
+    margin-bottom: 350px;
+
+    p {
+      width: 105px;
+      font-size: 10px;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 60px;
+      font-family: LatoItalic;
+    }
+  }
+
   .yellowCircle {
     width: 358px;
     height: 358px;
     border-radius: 50%;
     background-color: #ffd972;
     margin: 0 auto;
-    margin-left: -490px;
+    margin-left: -48%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,49 +59,6 @@
       font-size: 13px;
       text-align: center;
       font-family: LatoReg;
-    }
-  }
-
-  .pinkCircle {
-    width: 168px;
-    height: 168px;
-    border-radius: 50%;
-    margin-right: 50px;
-    margin-left: 700px;
-    margin-bottom: 330px;
-    background-color: #fcbcb8;
-
-    p {
-      width: 105px;
-      font-size: 10px;
-      text-align: center;
-      margin: 0 auto;
-      padding-top: 60px;
-      font-family: LatoItalic;
-    }
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .home {
-    .yellowCircle {
-    }
-
-    .pinkCircle {
-      margin-left: 470px;
-      margin-bottom: 300px;
-    }
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .home {
-    .yellowCircle {
-    }
-
-    .pinkCircle {
-      margin-left: 270px;
-      margin-bottom: 300px;
     }
   }
 }

@@ -66,8 +66,9 @@ function addMainList(){
             cookTime: $("#recipeTime"),
             servings: $("#recipeServings"),
         }],
+    let newRecipeName = $("#recipeName").val();
     };
-    _userProfileInfo.lists.push(newListObj);
+    _userProfileInfo.lists.push(newRecipeObj);
     updateUserInfo(_userProfileInfo);
     loadLists();
     $("#listName").val("");
@@ -85,12 +86,11 @@ function updateUserInfo(userObj){
 }
 
 function initListeners() {
-    $("nav .links a").click(function(e){
-        let btnID = e.currentTarget.id;
-        // console.log("click" + btnID);
-        MODEL.changePageContent(btnID)
-        
-    })
+    // $("nav .links a").click(function(e){
+    //     let btnID = e.currentTarget.id;
+    //     // console.log("click" + btnID);
+    //     // MODEL.changePageContent(btnID)
+    // })
 
     $(".bars").click(function(e){
         $(".bars").toggleClass("active");
@@ -101,6 +101,8 @@ function initListeners() {
         $(".bars").toggleClass("active");
         $(".links").toggleClass("active");
     });
+
+    
 }
 
 function initFirebase() {
@@ -166,6 +168,10 @@ function login() {
 
 function signUpAlert(){
     alert("Congrats! You've signed up!");
+}
+
+function createRecipeAlert(){
+    alert("Congrats! You've made a recipe!");
 }
 
 function createAccount() {
@@ -247,6 +253,7 @@ function signOut() {
         .signOut()
         .then(() => {
             console.log("signed out");
+            $("#signOutBtn")
         })
         .catch((error) => {
             console.log("error signing out");
@@ -259,10 +266,10 @@ $(document).ready(function() {
         let app = firebase.app();
         initFirebase();
         initListeners();
+        initURLListener();
     } catch(error){
         console.log("error ", error);
     };
-    
 
-    MODEL.changePageContent("home");
+    // MODEL.changePageContent("home");
 });

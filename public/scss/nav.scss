@@ -8,10 +8,11 @@ nav {
     // background-color: beige;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0 auto;
 
     .logo {
+      margin-top: 13px;
       width: 50vh;
 
       img {
@@ -20,23 +21,13 @@ nav {
       }
     }
 
-    .signOutBtn {
-      width: 90px;
-      height: 50px;
-      padding: 8px;
-      padding-left: 16px;
-      background-color: #ffd972;
-      border-radius: 26px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    // for some reason this styling isn't being applied
-
     .name {
       height: 75px;
+      margin-top: 15px;
       font-family: CaveatReg;
-      font-size: 35px;
+      font-size: 30px;
       margin-right: 20px;
+      text-transform: uppercase;
     }
   }
 }
@@ -78,7 +69,8 @@ nav {
   height: 75px;
   width: 50vw;
   overflow: hidden;
-  margin-left: -10px;
+  margin-top: 15px;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -96,15 +88,36 @@ nav {
     width: 90px;
     height: 50px;
     padding: 8px;
-    padding-left: 16px;
     background-color: #ffd972;
+    margin-top: 13px;
+    text-decoration: none;
+    font-family: CaveatReg;
+    font-size: 25px;
+    margin-right: 20px;
+    color: black;
+    border: none;
+    border-radius: 26px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .signOutBtn {
+    width: 90px;
+    height: 50px;
+    padding: 8px;
+    background-color: #ffd972;
+    margin-top: 13px;
+    text-decoration: none;
+    font-family: CaveatReg;
+    font-size: 25px;
+    margin-right: 20px;
+    color: black;
+    border: none;
     border-radius: 26px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
 
 .links.active {
-  height: 50px;
   opacity: 1;
 }
 
@@ -115,12 +128,25 @@ nav {
 
 @media screen and (max-width: 960px) {
   .bars {
+    margin-top: 13px;
     display: block;
+    // margin-left: 20px;
   }
 
   .links {
-    height: 0;
+    height: 410px;
     opacity: 0;
     flex-direction: column;
+    // align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    width: 35vw;
+
+    a {
+      margin-bottom: 15px;
+    }
   }
+}
+
+@media screen and (max-width: 360px) {
 }

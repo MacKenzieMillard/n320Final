@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home</title>
+    <title>Jungle Cook</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -18,31 +18,27 @@
           <span class="bar"></span>
         </div>
         <div class="links">
-          <a id="home" href="#">Home</a>
-          <a id="browse" href="#">Browse</a>
-          <a id="createRecipe" href="#">Create Recipe</a>
-          <a id="yourRecipes" href="#">Your Recipes</a>
-          <a id="editRecipe" href="#">Edit Recipe</a>
-          <a id="logIn" class="logIn" href="#">Login</a>
+          <a id="home" href="#home">Home</a>
+          <a id="browse" href="#browse">Browse</a>
+          <a id="createRecipe" href="#createRecipe">Create Recipe</a>
+          <a id="yourRecipes" href="#yourRecipes">Your Recipes</a>
+          <a id="logIn" class="logIn" href="#logIn">Login</a>
+          <button id="signOutBtn" class="signOutBtn" onclick="signOut()">
+            Logout
+          </button>
+          <div class="name"></div>
         </div>
-
-        <!-- hopefully these are styled okay, they should be but because of firebase not doing styling i can't check D: -->
-        <button id="signOutBtn" class="signOutBtn" onclick="signOut()">
-          Logout
-        </button>
-        <div class="name"></div>
       </div>
     </nav>
-
     <div id="app"></div>
     <footer>
       <div class="copyright">Copyright © 2019 The Jungle Cook</div>
       <div class="footerLinks">
-        <a id="logIn" class="logIn" href="#">Login</a>
-        <a id="browse" href="#">Recipes by Category</a>
+        <a id="logIn" class="logIn" href="#logIn">Login</a>
+        <a id="browse" href="#browse">Recipes by Category</a>
         <a href="#">Privacy and Copyright</a>
-        <a id="createRecipe" href="#">Create Recipe</a>
-        <a id="yourRecipes" href="#">Your Recipes</a>
+        <a id="createRecipe" href="#createRecipe">Create Recipe</a>
+        <a id="yourRecipes" href="#yourRecipes">Your Recipes</a>
       </div>
       <div class="socialMedia">
         <img src="images/facebook.svg" alt="" />
@@ -86,7 +82,7 @@
      -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script src="lib/jquery-3.6.0.min.js"></script>
-    <script src="app/model.js"></script>
+    <!-- <script src="app/model.js"></script> -->
     <script src="app/app.js"></script>
   </body>
 </html>

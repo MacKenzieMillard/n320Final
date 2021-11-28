@@ -1,14 +1,24 @@
 .recipeDetails {
   max-width: 1280px;
   padding: 75px;
+  padding-top: 110px;
+  position: relative;
 
-  h1 {
-    width: 220px;
-    height: 33px;
-    font-family: LatoReg;
-    font-size: 25px;
-    // transform: rotate(-90deg);
-    margin-bottom: 10px;
+  .sidewaysName {
+    width: 30px;
+    height: 330px;
+    // background-color: blueviolet;
+    position: absolute;
+
+    h1 {
+      font-family: LatoReg;
+      font-size: 25px;
+      // margin-bottom: 10px;
+      transform: rotate(-90deg);
+      // margin-right: 360px;
+      margin-left: -65px;
+      margin-top: 190px;
+    }
   }
 
   .description {
@@ -102,9 +112,20 @@
 @media screen and (max-width: 960px) {
   .description {
     flex-direction: column;
+
+    img {
+    }
   }
 
   .ingredients {
     max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .description {
+    img {
+      width: 251px;
+    }
   }
 }

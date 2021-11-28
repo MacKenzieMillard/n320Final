@@ -67,33 +67,26 @@ nav .navHolder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 auto;
 }
 nav .navHolder .logo {
+  margin-top: 13px;
   width: 50vh;
 }
 nav .navHolder .logo img {
   width: 217px;
   height: 55px;
 }
-nav .navHolder .signoutBtn {
-  width: 90px;
-  height: 50px;
-  padding: 8px;
-  padding-left: 16px;
-  background-color: #ffd972;
-  border-radius: 26px;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 nav .navHolder .name {
   height: 75px;
+  margin-top: 15px;
   font-family: CaveatReg;
-  font-size: 25px;
+  font-size: 30px;
   margin-right: 20px;
+  text-transform: uppercase;
 }
 
 .bars {
@@ -139,7 +132,8 @@ nav .navHolder .name {
   height: 75px;
   width: 50vw;
   overflow: hidden;
-  margin-left: -10px;
+  margin-top: 15px;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,15 +157,36 @@ nav .navHolder .name {
   width: 90px;
   height: 50px;
   padding: 8px;
-  padding-left: 16px;
   background-color: #ffd972;
+  margin-top: 13px;
+  text-decoration: none;
+  font-family: CaveatReg;
+  font-size: 25px;
+  margin-right: 20px;
+  color: black;
+  border: none;
+  border-radius: 26px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.links .signOutBtn {
+  width: 90px;
+  height: 50px;
+  padding: 8px;
+  background-color: #ffd972;
+  margin-top: 13px;
+  text-decoration: none;
+  font-family: CaveatReg;
+  font-size: 25px;
+  margin-right: 20px;
+  color: black;
+  border: none;
   border-radius: 26px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .links.active {
-  height: 50px;
   opacity: 1;
 }
 
@@ -182,16 +197,25 @@ nav .navHolder .name {
 
 @media screen and (max-width: 960px) {
   .bars {
+    margin-top: 13px;
     display: block;
   }
 
   .links {
-    height: 0;
+    height: 410px;
     opacity: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 15px;
+    width: 35vw;
+  }
+  .links a {
+    margin-bottom: 15px;
   }
 }
 .home {
@@ -210,13 +234,29 @@ nav .navHolder .name {
   background-size: cover;
   margin: 0 auto;
 }
+.home .pinkCircle {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  background-color: #fcbcb8;
+  margin: 0 auto;
+  margin-bottom: 350px;
+}
+.home .pinkCircle p {
+  width: 105px;
+  font-size: 10px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 60px;
+  font-family: LatoItalic;
+}
 .home .yellowCircle {
   width: 358px;
   height: 358px;
   border-radius: 50%;
   background-color: #ffd972;
   margin: 0 auto;
-  margin-left: -490px;
+  margin-left: -48%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,36 +284,7 @@ nav .navHolder .name {
   text-align: center;
   font-family: LatoReg;
 }
-.home .pinkCircle {
-  width: 168px;
-  height: 168px;
-  border-radius: 50%;
-  margin-right: 50px;
-  margin-left: 700px;
-  margin-bottom: 330px;
-  background-color: #fcbcb8;
-}
-.home .pinkCircle p {
-  width: 105px;
-  font-size: 10px;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 60px;
-  font-family: LatoItalic;
-}
 
-@media screen and (max-width: 960px) {
-  .home .pinkCircle {
-    margin-left: 470px;
-    margin-bottom: 300px;
-  }
-}
-@media screen and (max-width: 550px) {
-  .home .pinkCircle {
-    margin-left: 270px;
-    margin-bottom: 300px;
-  }
-}
 .browse {
   width: 100%;
   height: 100%;
@@ -292,7 +303,7 @@ nav .navHolder .name {
   font-family: CaveatBold;
   font-size: 25px;
   margin: 0 auto;
-  padding-top: 5%;
+  padding-top: 2%;
   margin-bottom: 50px;
 }
 .browse .gallery {
@@ -342,7 +353,9 @@ nav .navHolder .name {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.browse .gallery .pizza .description h3 {
+.browse .gallery .pizza .description a {
+  color: black;
+  text-decoration: none;
   width: 150px;
   font-family: LatoReg;
   font-size: 15px;
@@ -374,6 +387,8 @@ nav .navHolder .name {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 .browse .gallery .pizza .description .servings {
   width: 87px;
@@ -394,6 +409,8 @@ nav .navHolder .name {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 .browse .gallery .burger {
   width: 600px;
@@ -428,7 +445,9 @@ nav .navHolder .name {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.browse .gallery .burger .description h3 {
+.browse .gallery .burger .description a {
+  color: black;
+  text-decoration: none;
   width: 150px;
   font-family: LatoReg;
   font-size: 15px;
@@ -460,6 +479,8 @@ nav .navHolder .name {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 .browse .gallery .burger .description .servings {
   width: 87px;
@@ -480,6 +501,8 @@ nav .navHolder .name {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 .browse .gallery .pilaf {
   width: 600px;
@@ -514,7 +537,9 @@ nav .navHolder .name {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.browse .gallery .pilaf .description h3 {
+.browse .gallery .pilaf .description a {
+  color: black;
+  text-decoration: none;
   width: 150px;
   font-family: LatoReg;
   font-size: 15px;
@@ -546,6 +571,8 @@ nav .navHolder .name {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 .browse .gallery .pilaf .description .servings {
   width: 87px;
@@ -566,12 +593,15 @@ nav .navHolder .name {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 .browse .gallery .chowMein {
   width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 50px;
   margin-bottom: 50px;
 }
 .browse .gallery .chowMein .chowImg {
@@ -599,7 +629,9 @@ nav .navHolder .name {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.browse .gallery .chowMein .description h3 {
+.browse .gallery .chowMein .description a {
+  color: black;
+  text-decoration: none;
   width: 150px;
   font-family: LatoReg;
   font-size: 15px;
@@ -631,6 +663,8 @@ nav .navHolder .name {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 .browse .gallery .chowMein .description .servings {
   width: 87px;
@@ -651,6 +685,8 @@ nav .navHolder .name {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .createRecipe {
@@ -760,14 +796,14 @@ nav .navHolder .name {
       -ms-flex-align: center;
           align-items: center;
 }
-.yourRecipes .gallery .pizza {
+.yourRecipes .gallery .recipe .recipe-des {
   width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-right: 50px;
 }
-.yourRecipes .gallery .pizza .pizzaImg {
+.yourRecipes .gallery .recipe .recipe-des .recipeImg {
   width: 300px;
   height: 263px;
   border-radius: 20px;
@@ -785,7 +821,7 @@ nav .navHolder .name {
       -ms-flex-align: center;
           align-items: center;
 }
-.yourRecipes .gallery .pizza .pizzaImg a {
+.yourRecipes .gallery .recipe .recipe-des .recipeImg a {
   text-decoration: none;
   color: black;
   background-color: #ffd972;
@@ -807,7 +843,7 @@ nav .navHolder .name {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.yourRecipes .gallery .pizza .description {
+.yourRecipes .gallery .recipe .recipe-des .description {
   width: 224px;
   height: 263px;
   border-radius: 20px;
@@ -823,20 +859,20 @@ nav .navHolder .name {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.yourRecipes .gallery .pizza .description h3 {
+.yourRecipes .gallery .recipe .recipe-des .description h3 {
   width: 150px;
   font-family: LatoReg;
   font-size: 15px;
   border-bottom: solid 1px black;
   margin: 0 auto;
 }
-.yourRecipes .gallery .pizza .description p {
+.yourRecipes .gallery .recipe .recipe-des .description p {
   width: 150px;
   font-family: LatoReg;
   font-size: 9px;
   margin: 0 auto;
 }
-.yourRecipes .gallery .pizza .description .cookTime {
+.yourRecipes .gallery .recipe .recipe-des .description .cookTime {
   width: 83px;
   height: 25px;
   margin: 0 auto;
@@ -847,16 +883,18 @@ nav .navHolder .name {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.yourRecipes .gallery .pizza .description .cookTime img {
+.yourRecipes .gallery .recipe .recipe-des .description .cookTime img {
   width: 23px;
   height: 24px;
 }
-.yourRecipes .gallery .pizza .description .cookTime p {
+.yourRecipes .gallery .recipe .recipe-des .description .cookTime p {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
-.yourRecipes .gallery .pizza .description .servings {
+.yourRecipes .gallery .recipe .recipe-des .description .servings {
   width: 87px;
   height: 22px;
   margin: 0 auto;
@@ -867,21 +905,23 @@ nav .navHolder .name {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.yourRecipes .gallery .pizza .description .servings img {
+.yourRecipes .gallery .recipe .recipe-des .description .servings img {
   width: 24px;
   height: 21px;
 }
-.yourRecipes .gallery .pizza .description .servings p {
+.yourRecipes .gallery .recipe .recipe-des .description .servings p {
   font-family: LatoReg;
   font-size: 10px;
   margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 5px;
 }
-.yourRecipes .gallery .buttonHolder {
+.yourRecipes .gallery .recipe .buttonHolder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.yourRecipes .gallery .buttonHolder .button {
+.yourRecipes .gallery .recipe .buttonHolder .button {
   margin-left: 12px;
   margin-top: 15px;
   background-color: #ffd972;
@@ -907,13 +947,21 @@ nav .navHolder .name {
 .recipeDetails {
   max-width: 1280px;
   padding: 75px;
+  padding-top: 110px;
+  position: relative;
 }
-.recipeDetails h1 {
-  width: 220px;
-  height: 33px;
+.recipeDetails .sidewaysName {
+  width: 30px;
+  height: 330px;
+  position: absolute;
+}
+.recipeDetails .sidewaysName h1 {
   font-family: LatoReg;
   font-size: 25px;
-  margin-bottom: 10px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-left: -65px;
+  margin-top: 190px;
 }
 .recipeDetails .description {
   display: -webkit-box;
@@ -1004,9 +1052,13 @@ nav .navHolder .name {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-
   .ingredients {
     max-width: 800px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .description img {
+    width: 251px;
   }
 }
 .editRecipe {
@@ -1072,6 +1124,7 @@ nav .navHolder .name {
   height: 100vh;
   margin: 0 auto;
   padding: 100px;
+  padding-top: 150px;
   background-color: #ffd972;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1184,6 +1237,10 @@ nav .navHolder .name {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  .account .createAccount {
+    margin: 0;
   }
 }
 footer {
@@ -1195,6 +1252,8 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1209,6 +1268,8 @@ footer .footerLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1232,4 +1293,20 @@ footer .socialMedia img {
   width: 20px;
   height: 20px;
   margin-right: 40px;
+}
+
+@media screen and (max-width: 960px) {
+  footer {
+    height: 75px;
+    margin-bottom: 2px;
+  }
+  footer .copyright {
+    margin-bottom: 5px;
+  }
+  footer .footerLinks a {
+    margin-bottom: 5px;
+  }
+  footer .socialMedia {
+    margin-bottom: 5px;
+  }
 }

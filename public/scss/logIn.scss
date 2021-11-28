@@ -3,6 +3,7 @@
   height: 100vh;
   margin: 0 auto;
   padding: 100px;
+  padding-top: 150px;
   background-color: #ffd972;
   display: flex;
   justify-content: space-between;
@@ -103,5 +104,10 @@
   .account {
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 0 auto;
+
+    .createAccount {
+      margin: 0;
+    }
   }
 }

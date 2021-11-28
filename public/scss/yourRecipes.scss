@@ -27,26 +27,116 @@
     flex-wrap: wrap;
     align-items: center;
 
-    .pizza {
-      width: 600px;
-      display: flex;
-      margin-right: 50px;
-
-      .pizzaImg {
-        width: 300px;
-        height: 263px;
-        border-radius: 20px;
-        background-image: url(../images/recipe-pizza.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+    .recipe {
+      .recipe-des {
+        width: 600px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-right: 50px;
 
-        a {
-          text-decoration: none;
-          color: black;
+        .recipeImg {
+          width: 300px;
+          height: 263px;
+          border-radius: 20px;
+          background-image: url(../images/recipe-pizza.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          a {
+            text-decoration: none;
+            color: black;
+            background-color: #ffd972;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 128px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: CaveatReg;
+            font-size: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          }
+        }
+
+        .description {
+          width: 224px;
+          height: 263px;
+          border-radius: 20px;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          h3 {
+            width: 150px;
+            font-family: LatoReg;
+            font-size: 15px;
+            border-bottom: solid 1px black;
+            margin: 0 auto;
+          }
+
+          p {
+            width: 150px;
+            font-family: LatoReg;
+            font-size: 9px;
+            margin: 0 auto;
+          }
+
+          .cookTime {
+            width: 83px;
+            height: 25px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+
+            img {
+              width: 23px;
+              height: 24px;
+            }
+
+            p {
+              font-family: LatoReg;
+              font-size: 10px;
+              margin: 0 auto;
+              margin-left: 10px;
+              margin-top: 5px;
+            }
+          }
+
+          .servings {
+            width: 87px;
+            height: 22px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+
+            img {
+              width: 24px;
+              height: 21px;
+            }
+
+            p {
+              font-family: LatoReg;
+              font-size: 10px;
+              margin: 0 auto;
+              margin-left: 10px;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+
+      .buttonHolder {
+        display: flex;
+
+        .button {
+          margin-left: 12px;
+          margin-top: 15px;
           background-color: #ffd972;
           border-radius: 30px;
           cursor: pointer;
@@ -60,90 +150,6 @@
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
-      }
-
-      .description {
-        width: 224px;
-        height: 263px;
-        border-radius: 20px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-
-        h3 {
-          width: 150px;
-          font-family: LatoReg;
-          font-size: 15px;
-          border-bottom: solid 1px black;
-          margin: 0 auto;
-        }
-
-        p {
-          width: 150px;
-          font-family: LatoReg;
-          font-size: 9px;
-          margin: 0 auto;
-        }
-
-        .cookTime {
-          width: 83px;
-          height: 25px;
-          margin: 0 auto;
-          display: flex;
-          justify-content: space-evenly;
-
-          img {
-            width: 23px;
-            height: 24px;
-          }
-
-          p {
-            font-family: LatoReg;
-            font-size: 10px;
-            margin: 0 auto;
-          }
-        }
-
-        .servings {
-          width: 87px;
-          height: 22px;
-          margin: 0 auto;
-          display: flex;
-          justify-content: space-evenly;
-
-          img {
-            width: 24px;
-            height: 21px;
-          }
-
-          p {
-            font-family: LatoReg;
-            font-size: 10px;
-            margin: 0 auto;
-          }
-        }
-      }
-    }
-
-    .buttonHolder {
-      display: flex;
-
-      .button {
-        margin-left: 12px;
-        margin-top: 15px;
-        background-color: #ffd972;
-        border-radius: 30px;
-        cursor: pointer;
-        width: 128px;
-        height: 42px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: CaveatReg;
-        font-size: 20px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
     }
   }

@@ -1,5 +1,3 @@
-// ive been beating my head on this for hours i cannot figure out the list thing im resigned to a bad grade sorry i've been awake for over 24hrs at this point
-
 var MODEL = (function(){
     var homeContent = `<div class="home">
     <div class="pinkCircle">
@@ -101,30 +99,27 @@ var MODEL = (function(){
     var createRecipeContent = `<div class="createRecipe">
     <h1>Hey, create your recipe!</h1>
     <div class="recipeForm">
-      <input id="attachFile" type="text" placeholder="Add Recipe Image" />
-      <input type="text" placeholder="Recipe Name" />
-      <input type="text" placeholder="Recipe Description" />
-      <input type="text" placeholder="Recipe Total Time" />
-      <input type="text" placeholder="Recipe Serving Size" />
+      <input id="recipeImg" type="file" placeholder="Add Recipe Image" />
+      <input id="recipeName" type="text" placeholder="Recipe Name" />
+      <input id="description" type="text" placeholder="Recipe Description" />
+      <input id="recipeTime" type="text" placeholder="Recipe Cook Time" />
+      <input id="recipeServings" type="text" placeholder="Recipe Serving Size" />
       <p>Enter Ingredients:</p>
-      <input type="text" placeholder="Ingredient #1" />
-      <input type="text" placeholder="Ingredient #2" />
-      <input type="text" placeholder="Ingredient #3" />
+      <input id="ingredient1" type="text" placeholder="Ingredient #1" />
+      <input id="ingredient2" type="text" placeholder="Ingredient #2" />
+      <input id="ingredient3" type="text" placeholder="Ingredient #3" />
       <p>Enter Instructions:</p>
-      <input type="text" placeholder="Instruction #1" />
-      <input type="text" placeholder="Instruction #2" />
-      <input type="text" placeholder="Instruction #3" />
+      <input id="instruction1" type="text" placeholder="Instruction #1" />
+      <input id="instruction2" type="text" placeholder="Instruction #2" />
+      <input id="instruction3" type="text" placeholder="Instruction #3" />
       <input
-        id=".createRecipeBtn"
+        id="createRecipeBtn"
         type="submit"
         name="submit"
-        onclick="addMainList()"
+        onclick="addMainRecipe()"
+        onclick="createRecipeAlert()"
         value="Create Recipe"
       />
-      <div class="createRecipeAlert">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-      Congrats! You've made a recipe!
-      </div>
     </div>
   </div>
   `;
@@ -134,7 +129,7 @@ var MODEL = (function(){
       <div class="recipe">
         <div class="pizza">
           <div id="recipeThumb" class="pizzaImg">
-            <a id="recipeDetails" href="recipeDetails.html">View</a>
+            <a id="recipeDetails" href="${"#recipeDetails"}">View</a>
           </div>
           <div class="description">
             <h3 id="recipeTitle">Supreme Pizza</h3>
@@ -164,36 +159,35 @@ var MODEL = (function(){
     var editRecipeContent = `<div class="editRecipe">
     <h1>Hey Michael, edit your recipe!</h1>
     <div class="recipeForm">
-      <input id="attachFile" type="text" placeholder="Edit Recipe Image" />
-      <input type="text" placeholder="Supreme" />
-      <input
+      <input id="recipeImg" type="file" placeholder="Edit Recipe Image" />
+      <input id="recipeTitle" type="text" placeholder="Edit Title" />
+      <input id="recipeDescription"
         type="text"
-        placeholder="Make pizza night super duper out of this…"
+        placeholder="Edit Description"
       />
-      <input type="text" placeholder="1h 24 min" />
-      <input type="text" placeholder="4 servings" />
+      <input id="recipeTime" type="text" placeholder="Edit Cook Time" />
+      <input id="recipeServings" type="text" placeholder="Edit Serving Size" />
       <p>Edit Ingredients:</p>
-      <input type="text" placeholder="Ingredient #1" />
-      <input type="text" placeholder="Ingredient #2" />
-      <input type="text" placeholder="Ingredient #3" />
+      <input id="ingredient1" type="text" placeholder="Ingredient #1" />
+      <input id="ingredient2" type="text" placeholder="Ingredient #2" />
+      <input id="ingredient3" type="text" placeholder="Ingredient #3" />
       <p>Edit Instructions:</p>
-      <input type="text" placeholder="Instruction #1" />
-      <input type="text" placeholder="Instruction #2" />
-      <input type="text" placeholder="Instruction #3" />
+      <input id="instruction1" type="text" placeholder="Instruction #1" />
+      <input id="instruction2" type="text" placeholder="Instruction #2" />
+      <input id="instruction3" type="text" placeholder="Instruction #3" />
     </div>
     <div class="addList">
       <input
         type="submit"
         name="submit"
-        onclick="addMainList()"
+        onclick="addMainRecipe()"
         value="Add Recipe"
       />
     </div>
   </div>
   `;
 
-  // i never figured out how to include other links into only one page when its not in the nav
-    var recipeDetailsContent = `<div class="recipeDetails">
+    var recipeDetailsContent = `<div id="recipeDetails" class="recipeDetails">
     <h1>supreme pizza</h1>
     <div class="description">
       <img src="images/recipe-pizza.jpg" alt="supreme pizza" />
@@ -257,7 +251,7 @@ var MODEL = (function(){
       <input name="email" id="email" type="email" placeholder="Email Address" />
       <input name="password" id="pw" type="password" placeholder="Password" />
       <div class="submit">
-        <input name="submit" type="submit" value="Sign Up" onclick="createAccount()" />
+        <input name="submit" type="submit" value="Sign Up" onclick="createAccount()" onclick="signUpAlert()" />
       </div>
     </div>
   </div>
