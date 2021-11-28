@@ -3,6 +3,29 @@ var userExist = false;
 var userFullName = "";
 var _userProfileInfo = {};
 
+function changeRoute() {
+    let hashTag = window.location.hash;
+    let pageID = hashTag.replace("#", "");
+    console.log(hashTag + " " + pageID);
+    
+    if (pageID != "") {
+        $.get(`pages/${pageID}/${pageID}.html`, function(data) {
+        // console.log("data" + data);
+        $("#app").html(data);
+    });}
+    else {
+        $.get(`pages/home/home.html`, function(data) {
+            // console.log("data" + data);
+            $("#app").html(data);
+    });}    
+}
+
+function initURLListener() {
+    window.onhashchange = changeRoute;
+    $(window).on("hashchange", changeRoute);
+    changeRoute();
+}
+
 function itemChecked(element, listIndex, itemIndex) {
     $(element).parent().toggleClass("strike");
     let checkedValue = !_userProfileInfo.lists[listIndex].listItems[itemIndex].checked;
@@ -11,11 +34,23 @@ function itemChecked(element, listIndex, itemIndex) {
 }
 
 function addItem(listIndex) {
-    let newItemName = $("#addItem").val();
+    let newItemName = $("#createRecipeBtn").val();
     let newItemObj = {
-        name: newItemName,
-        checked: false,
-        category: "",
+        image: $("#recipeImg"),
+            name: $("#recipeTitle"),
+            description: $("#recipeDescription"),
+            cookTime: $("#recipeTime"),
+            servings: $("#recipeServings"),
+            ingredients: [
+                $("#ingredient1"), 
+                $("#ingredient2"),
+                $("#ingredient3")
+            ],
+            instructions: [
+                $("#instruction1"), 
+                $("#instruction2"),
+                $("#instruction3")
+            ]
     };
     _userProfileInfo.lists[listIndex].listItems.push(newItemObj);
     loadListItems(listIndex);
@@ -55,23 +90,31 @@ function loadData() {
     $("#app").html(listString);
 }
 
-function addMainList(){
-    let newListName = $("#listName").val();
-    let newListObj = {
-        name: newListName,
-        listItems: [{
-            name: $("#recipeTitle"),
-            image: $("#recipeThumb"),
-            description: $("#recipeDescription"),
-            cookTime: $("#recipeTime"),
-            servings: $("#recipeServings"),
-        }],
+function addMainRecipe(){
     let newRecipeName = $("#recipeName").val();
+    let newRecipeImg = $("#recipeImg").val();
+    let newRecipeDescription = $("#recipeDescription").val();
+    let newRecipeTime = $("#recipeTime").val();
+    let newRecipeServings = $("#recipeServings").val();
+    let newRecipeIngredients = $("#ingredient").val();
+    let newRecipeInstructions = $("#instruction").val();
+    let newRecipeObj = {
+        recipeName: newRecipeName, 
+        recipeImg: newRecipeImg,
+        recipeDescription: newRecipeDescription,
+        recipeTime: newRecipeTime,
+        recipeServings: newRecipeServings,
+        ingredients: [
+            newRecipeIngredients
+        ],
+        instructions: [
+            newRecipeInstructions
+        ],
     };
     _userProfileInfo.lists.push(newRecipeObj);
     updateUserInfo(_userProfileInfo);
     loadLists();
-    $("#listName").val("");
+    $("#recipeForm").val("");
 }
 
 function updateUserInfo(userObj){
