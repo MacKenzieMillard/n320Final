@@ -2,7 +2,7 @@
 
 ## Firebase Link
 
-https://kmmcertn320final.web.app/#
+https://kmmcertn320final.web.app/#home
 
 ### Description of Application
 

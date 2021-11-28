@@ -1,3 +1,23 @@
+// var RECIPES = [
+//     { 
+//         recipeName: newRecipeName,
+//         recipeItems: [
+//             {
+//             recipeImg: newRecipeImg,
+//             recipeDescription: newRecipeDescription,
+//             recipeTime: newRecipeTime,
+//             recipeServings: newRecipeServings,
+//             ingredients: [
+//                 newRecipeIngredients
+//             ],
+//             instructions: [
+//                 newRecipeInstructions
+//             ],
+//             },
+//         ],
+//     }
+// ];
+
 var _db = "";
 var userExist = false;
 var userFullName = "";
