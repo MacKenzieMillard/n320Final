@@ -1,5 +1,36 @@
 // var RECIPES = [
 //     { 
+//         recipeName: "Supreme Pizza",
+//         recipeItems: [
+//             {
+//             recipeImg: "../images/recipe-pizza.jpg",
+//             recipeDescription: `Make pizza night super duper out of this world with homemade pizza.
+//             This recipe is supreme with vegetables and two types of meat. Yum!`,
+//             recipeTime: `1h 24min`,
+//             recipeServings: `4 servings`,
+//             ingredients: [
+//                 `1/4 batch pizza dough`,
+//                 `2 tablespoons Last-Minute Pizza Sauce`,
+//                 `10 slices pepperoni`,
+//                 `1 cup cooked and crumbled Italian sausage`,
+//                 `2 large mushrooms, sliced`,
+//                 `1/4 bell pepper, sliced`,
+//                 `1 tablespoon sliced black olives`,
+//                 `1 cup shredded mozzarella cheese`,
+//             ],
+//             instructions: [
+//                 `Preheat the oven to 475°. Spray pizza pan with nonstick cooking or line
+//                 a baking sheet with parchment paper.`,
+//                 `Flatten dough into a thin round and place on the pizza pan.`,
+//                 `Spread pizza sauce over the dough.`,
+//                 `Layer the toppings over the dough in the order listed.`,
+//                 `Bake for 8 to 10 minutes or until the crust is crisp and the cheese
+//                 melted and lightly browned.`,
+//             ],
+//             },
+//         ],
+//     },
+//     { 
 //         recipeName: newRecipeName,
 //         recipeItems: [
 //             {
@@ -116,6 +147,37 @@ function loadData() {
         listString += `<li id="${index}" onclick="loadRecipeItems(${index})">${list.name} 
         <span class="right">Items: ${list.newRecipeObj.length}</span>
         </li>`;
+    //     listString += `
+    //     <li id="${index}">
+    //     <div class="recipe">
+    //   <div class="recipe-des">
+    //     <div id="recipeImg" class="recipeImg">
+    //       <a id="viewBtn" class="viewBtn" href="#recipeDetails">View</a>
+    //     </div>
+    //     <div class="description">
+    //       <h3 id="recipeName">Supreme Pizza</h3>
+    //       <p id="recipeDescription">
+    //         Make pizza night super duper out of this world with homemade pizza.
+    //         This recipe is supreme with vegetables and two types of meat. Yum!
+    //       </p>
+    //       <div class="cookTime">
+    //         <img src="images/time.svg" alt="" />
+    //         <p id="recipeTime">1h 24min</p>
+    //       </div>
+    //       <div class="servings">
+    //         <img src="images/servings.svg" alt="" />
+    //         <p id="recipeServings">4 servings</p>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <div class="buttonHolder">
+    //     <button class="button" onclick="window.location.href='#editRecipe';">
+    //       Edit Recipe
+    //     </button>
+    //     <button onclick="deleteItem()" class="button">Delete</button>
+    //   </div>
+    // </div>
+    //     </li>`;
     });
     listString += "</ul>";
     $("#app").html(listString);
