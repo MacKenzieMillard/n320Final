@@ -1,5 +1,5 @@
 <div class="yourRecipes">
-  <h1>Hey , here are your recipes!</h1>
+  <h1>Hey <span class="name"></span>, here are your recipes!</h1>
   <div class="gallery">
     <div class="recipe">
       <div class="recipe-des">
@@ -23,10 +23,10 @@
         </div>
       </div>
       <div class="buttonHolder">
-        <div class="button" onclick="window.location.href='#editRecipe';">
+        <button class="button" onclick="window.location.href='#editRecipe';">
           Edit Recipe
-        </div>
-        <div class="button">Delete</div>
+        </button>
+        <button onclick="deleteItem()" class="button">Delete</button>
       </div>
     </div>
   </div>

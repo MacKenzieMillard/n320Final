@@ -15,7 +15,7 @@
 //             ],
 //             },
 //         ],
-//     }
+//     },
 // ];
 
 var _db = "";
@@ -46,44 +46,55 @@ function initURLListener() {
     changeRoute();
 }
 
-function itemChecked(element, listIndex, itemIndex) {
-    $(element).parent().toggleClass("strike");
-    let checkedValue = !_userProfileInfo.lists[listIndex].listItems[itemIndex].checked;
-    _userProfileInfo.lists[listIndex].listItems[itemIndex].checked = checkedValue;
-    // console.log("checked ", LISTS);
-}
-
-function addItem(listIndex) {
-    let newItemName = $("#createRecipeBtn").val();
-    let newItemObj = {
-        image: $("#recipeImg"),
-            name: $("#recipeTitle"),
-            description: $("#recipeDescription"),
-            cookTime: $("#recipeTime"),
-            servings: $("#recipeServings"),
+function addMainRecipe(){
+    let newRecipeName = $("#recipeName").val();
+    let newRecipeImg = $("#recipeImg").val();
+    let newRecipeDescription = $("#recipeDescription").val();
+    let newRecipeTime = $("#recipeTime").val();
+    let newRecipeServings = $("#recipeServings").val();
+    let newRecipeIngredients = $("#ingredient").val();
+    let newRecipeInstructions = $("#instruction").val();
+    let newRecipeObj = { 
+        recipeName: newRecipeName,
+        recipeItems: [
+            {
+            recipeImg: newRecipeImg,
+            recipeDescription: newRecipeDescription,
+            recipeTime: newRecipeTime,
+            recipeServings: newRecipeServings,
             ingredients: [
-                $("#ingredient1"), 
-                $("#ingredient2"),
-                $("#ingredient3")
+                newRecipeIngredients
             ],
             instructions: [
-                $("#instruction1"), 
-                $("#instruction2"),
-                $("#instruction3")
-            ]
+                newRecipeInstructions
+            ],
+            },
+        ],
     };
-    _userProfileInfo.lists[listIndex].listItems.push(newItemObj);
-    loadListItems(listIndex);
+
+    $("#recipeImg").html(newRecipeImg);
+    $("#recipeName").html(newRecipeImg);
+    $("#recipeDescription").html(newRecipeDescription);
+    $("#recipeTime").html(newRecipeTime);
+    $("#recipeServings").html(newRecipeServings);
+    $("#recipeIngredients").html(newRecipeIngredients);
+    $("#recipeInstructions").html(newRecipeInstructions);
+
+    _userProfileInfo.lists.push(newRecipeObj);
+    // i don't why this isn't working it says push is undefined ?????
+    updateUserInfo(_userProfileInfo);
+    loadData();
+    $("#recipeName").val();
 }
 
 function deleteItem(listIndex, index) {
-    _userProfileInfo.lists[listIndex].listItems.splice(index, 1);
-    loadListItems(listIndex);
+    _userProfileInfo.lists.newRecipeObj.splice(index, 1);
+    loadRecipeItems(listIndex);
 }
 
-function loadListItems(listIndex) {
+function loadRecipeItems(listIndex) {
     let listString = `<button onclick="loadData()">BACK</button><ul>`;
-    $.each(_userProfileInfo.lists[listIndex].listItems, function (index, listItem) {
+    $.each(_userProfileInfo.lists[listIndex].newRecipeObj, function (index, listItem) {
         listString += `
         <li id="${index}" class="${listItem.checked ? "strike": ""}">
         <input ${listItem.checked ? (checked = "checked"): ""} type="checkbox" id="${index}" name="${listItem.name}" onclick="itemChecked(this, ${listIndex}, ${index})">
@@ -102,39 +113,12 @@ function loadListItems(listIndex) {
 function loadData() {
     let listString = "<ul>";
     $.each(_userProfileInfo.lists, function(index, list) {
-        listString += `<li id="${index}" onclick="loadListItems(${index})">${list.name} 
-        <span class="right">Items: ${list.listItems.length}</span>
+        listString += `<li id="${index}" onclick="loadRecipeItems(${index})">${list.name} 
+        <span class="right">Items: ${list.newRecipeObj.length}</span>
         </li>`;
     });
     listString += "</ul>";
     $("#app").html(listString);
-}
-
-function addMainRecipe(){
-    let newRecipeName = $("#recipeName").val();
-    let newRecipeImg = $("#recipeImg").val();
-    let newRecipeDescription = $("#recipeDescription").val();
-    let newRecipeTime = $("#recipeTime").val();
-    let newRecipeServings = $("#recipeServings").val();
-    let newRecipeIngredients = $("#ingredient").val();
-    let newRecipeInstructions = $("#instruction").val();
-    let newRecipeObj = {
-        recipeName: newRecipeName, 
-        recipeImg: newRecipeImg,
-        recipeDescription: newRecipeDescription,
-        recipeTime: newRecipeTime,
-        recipeServings: newRecipeServings,
-        ingredients: [
-            newRecipeIngredients
-        ],
-        instructions: [
-            newRecipeInstructions
-        ],
-    };
-    _userProfileInfo.lists.push(newRecipeObj);
-    updateUserInfo(_userProfileInfo);
-    loadLists();
-    $("#recipeForm").val("");
 }
 
 function updateUserInfo(userObj){
@@ -213,7 +197,7 @@ function login() {
                 .then((doc) => {
                     _userProfileInfo = doc.data(); 
                     // stores data locally after logging in
-                    loadLists();
+                    loadData();
                     console.log("login userinfo ", _userProfileInfo);
                 })
                 .catch((error) => {
@@ -247,7 +231,7 @@ function createAccount() {
         firstName: fName,
         lastName: lName,
         email: email,
-        lists: [],
+        lists: [newRecipeObj],
     }
 
     console.log("create " + fName + " " + lName + " " + email + " " + pass);

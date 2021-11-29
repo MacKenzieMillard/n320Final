@@ -726,18 +726,11 @@ nav .navHolder .name {
   font-family: LatoReg;
   font-size: 20px;
 }
-.createRecipe .recipeForm .createRecipeBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.createRecipe .recipeForm .createRecipeBtn input {
+.createRecipe .recipeForm button {
   width: 422px;
   height: 52px;
   background-color: #efa7a7;
+  margin: 0 auto;
   font-family: CaveatReg;
   font-size: 25px;
   cursor: pointer;
@@ -925,6 +918,7 @@ nav .navHolder .name {
   margin-left: 12px;
   margin-top: 15px;
   background-color: #ffd972;
+  border: none;
   border-radius: 30px;
   cursor: pointer;
   width: 128px;
